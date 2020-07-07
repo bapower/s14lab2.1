@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lab 2</title>
+
+    <!-- Styles -->
+    <link href="{{ url_for('static', filename='./css/index.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body>
+	<div class="container">
+	<div class="row">
+		<div class="form-box col-md-10 text-center">
+        <h1>Price Predictions</h1>
+        	<small>Beds: 4, Baths: 2.5, Square feet: 3005, Age: 15, Lot size: 17903.0, Garage: 1</small>
+    	    <form role="form col-md-4 col-md-offset-4 text-center" id="contact-form">
+	            <div class="form-group col-md-4 offset-md-4">
+				  <label class="text-center control-label" for="selectbasic">Choose a model</label>
+				  <div class="text-center">
+				    <select id="selectModel" name="selectModel" class="form-control" onChange="output()">
+				    	<option value="">Please choose...</option>
+				      <option value="{{ linearRegressionPrediction }}">Linear Regression</option>
+				      <option value="{{ decisionTreePrediction }}">Decision Tree</option>
+				    </select>
+				  </div>
+				</div>
+		         <div class="text-center">
+		            <button type="submit" class="btn btn-primary">Submit</button>
+		        </div>
+    	    </form>   
+		</div>
+	</div>
+	<div class="row">
+		<div class="form-box col-md-10">
+        <h3>Prediction:</h3>
+        <p class="text-center prediction-value"></p>
+		</div>
+	</div>
+</div>
+
+	<script>
+       
+
+         function output(){
+         	var select = document.getElementById("selectModel");
+         	var value = select.value;
+         	var predictionValue = document.querySelector('.prediction-value');
+         	predictionValue.textContent = value;
+
+        }
+
+ 
+
+    
+        </script>
+</body>
+</html>
