@@ -26,17 +26,14 @@ jupyter-console==6.1.0
 jupyter-core==4.6.3
 kiwisolver==1.2.0
 MarkupSafe==1.1.1
-matplotlib @ file:///opt/concourse/worker/volumes/live/34dd81d3-0a70-4e5e-5ad6-be36ca7e59f7/volume/matplotlib-base_1592846084794/work
 mistune==0.8.4
-mkl-fft==1.1.0
-mkl-random==1.1.1
-mkl-service==2.3.0
+mkl-fft==1.0.6
+mkl-random==1.0.1.1
 nbconvert==5.6.1
 nbformat==5.0.7
 notebook==6.0.3
 numpy==1.18.5
 packaging==20.4
-pandas @ file:///opt/concourse/worker/volumes/live/38d1301c-8fa9-4d2f-662e-34dddf33b183/volume/pandas_1592841668171/work
 pandocfilters==1.4.2
 parso==0.7.0
 pexpect==4.8.0
